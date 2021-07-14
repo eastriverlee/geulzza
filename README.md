@@ -5,12 +5,12 @@
 
 # usage
 ```swift
-let bully = "윤석열"
+let cent = "윤석열"
 let chicken = "박근혜"
 let rat = "이명박"
 let ashdragon = "leejaeyong"
 let joogija = "JOOJINWOO"
-print(bully.이가 + chicken.을를 + "때렸다.")
+print(cent.이가 + chicken.을를 + "때렸다.")
 //윤석열이 박근혜를 때렸다.
 print(ashdragon.은는 + "바보.")
 //leejaeyong은 바보.
@@ -45,11 +45,11 @@ print(앏.char)
 print(앏.char)
 //쌃
 ```
-composing, decomposing and editing are supported for `Geulzza` `class`.  
+composing, decomposing and editing are supported for `Geulzza` class.  
 글짜 클래스는 조합, 해체, 수정이 가능합니다.  
 
 `Jaeum`, `Moeum` and `Badchim` are all `enum` of `Character` type.  
-자음 모음 받침은 모두 `Character` 타입의 `enum`입니다.  
+자음, 모음, 받침은 모두 `Character` 타입의 `enum`입니다.  
 
 # structure
 ```swift
@@ -86,7 +86,7 @@ it's made of only one file, but here is the core of this library anyway.
 just use Swift Package Manager to install **geulzza** by adding this repository.
 스위프트 패키지 매니저를 사용해 이 리포지토리를 추가하여 **geulzza**를 설치하세요.
 ### copy && paste
-or just copy and paste `geulzza.swift` to your project.
+or just copy and paste `geulzza.swift` to your project.  
 아니면 `geulzza.swift` 파일을 복사해 당신의 프로젝트에 붙여넣으세요.
 
 # support
