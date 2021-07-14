@@ -1,4 +1,6 @@
 # geulzza
+![logo](https://github.com/eastriverlee/geulzza/blob/master/geulzza.png?raw=true)
+
 # about
 **geulzza** is a super-lightweight swift library that helps dealing with korean string by decomposing each letter into jamos.  
 **글짜**는 자모를 분리해 한글 스트링을 다루는 데 도움을 주는 무지 가벼운 스위프트 라이브러리입니다.  
