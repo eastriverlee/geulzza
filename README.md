@@ -5,6 +5,8 @@
 
 # usage
 ```swift
+import geulzza
+
 let cent = "윤석열"
 let chicken = "박근혜"
 let rat = "이명박"
@@ -23,6 +25,8 @@ eun/neun ee/ga eul/reul will be appended depending on the last consonant.
 받침 유무, 혹은 마지막 글자에 따라 은/는 이/가 을/를 을 선택해 붙여줍니다.  
 
 ```swift
+import geulzza
+
 let c: Character = "앏"
 let 앏 = Geulzza("앏")
 print(앏 == c.geulzza)
