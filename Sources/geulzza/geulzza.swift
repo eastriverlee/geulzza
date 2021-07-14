@@ -127,8 +127,8 @@ public extension Character {
     }
 }
 
-private let hangeulStart   : Hex = 0xAC00
-private let hangeulEnd     : Hex = 0xD7AF
+let hangeulStart   : Hex = 0xAC00
+let hangeulEnd     : Hex = 0xD7AF
 public extension Hex {
     var char: Character {
         Character(UnicodeScalar(self)!)
@@ -138,9 +138,9 @@ public extension Hex {
     }
 }
 
-private let jaeumStart   : Hex = 0x1100
-private let moeumStart   : Hex = 0x1161
-private let badchimStart : Hex = 0x11A7
+let jaeumStart   : Hex = 0x1100
+let moeumStart   : Hex = 0x1161
+let badchimStart : Hex = 0x11A7
 public extension Character {
     init(_ 초성: Jaeum, _ 중성: Moeum, _ 종성: Badchim) {
         guard 중성 != .__ && 종성 != .__ else { self = 초성.rawValue; return }
@@ -202,5 +202,11 @@ public class Geulzza {
 extension Geulzza: Equatable {
     public static func == (lhs: Geulzza, rhs: Geulzza) -> Bool {
         lhs.char == rhs.char
+    }
+    public static func == (lhs: Geulzza, rhs: Character) -> Bool {
+        lhs.char == rhs
+    }
+    public static func == (lhs: Character, rhs: Geulzza) -> Bool {
+        lhs == rhs.char 
     }
 }

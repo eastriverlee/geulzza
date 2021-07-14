@@ -1,7 +1,7 @@
 # geulzza
 # about
-**geulzza** is a super-lightweight swift library that helps dealing with korean string.  
-**글짜**는 한글 스트링을 다루는 데 도움을 주는 무지 가벼운 스위프트 라이브러리입니다.  
+**geulzza** is a super-lightweight swift library that helps dealing with korean string by decomposing each letter into jamos.  
+**글짜**는 자모를 분리해 한글 스트링을 다루는 데 도움을 주는 무지 가벼운 스위프트 라이브러리입니다.  
 
 # usage
 ```swift
@@ -26,7 +26,11 @@ eun/neun ee/ga eul/reul will be appended depending on the last consonant.
 let c: Character = "앏"
 let 앏 = Geulzza("앏")
 print(앏 == c.geulzza)
+print(앏 == c)
+print("햟" == 앏)
 //true
+//true
+//false
 let 받침 = 앏.종성
 print(받침.rawValue)
 //ᆲ
@@ -73,8 +77,14 @@ class Geulzza {
 }
 
 extension Geulzza: Equatable {
-    static func == (lhs: Geulzza, rhs: Geulzza) -> Bool {
+    public static func == (lhs: Geulzza, rhs: Geulzza) -> Bool {
         lhs.char == rhs.char
+    }
+    public static func == (lhs: Geulzza, rhs: Character) -> Bool {
+        lhs.char == rhs
+    }
+    public static func == (lhs: Character, rhs: Geulzza) -> Bool {
+        lhs == rhs.char 
     }
 }
 ```
@@ -84,7 +94,7 @@ it's made of only one file, but here is the core of this library anyway.
 # integration
 ### SPM
 just use Swift Package Manager to install **geulzza** by adding this repository.
-스위프트 패키지 매니저를 사용해 이 리포지토리를 추가하여 **geulzza**를 설치하세요.
+스위프트 패키지 매니저를 사용해 이 리포지토리를 추가하는 것으로 **geulzza**를 설치하세요.
 ### copy && paste
 or just copy and paste `geulzza.swift` to your project.  
 아니면 `geulzza.swift` 파일을 복사해 당신의 프로젝트에 붙여넣으세요.
