@@ -57,23 +57,31 @@ composing, decomposing and editing are supported for `Geulzza` class.
 
 # structure
 ```swift
-class Geulzza {
+public class Geulzza {
     init(_ c: Character) {
         unicode = c.unicode
-        guard Unicode.isHangeul(unicode) else { nonHangeul = c; return }
+        guard Hex.isHangeul(unicode) else { nonHangeul = c; return }
         let offset = unicode - hangeulStart
         초성 = Jaeum(rawValue: ((offset / 28) / 21 + jaeumStart).char)!
         중성 = Moeum(rawValue: ((offset / 28) % 21 + moeumStart).char)!
-        종성 = Badchim(rawValue: ((offset % 28) + badchimStart).char)!
+        종성 = Badchim(rawValue: ((offset % 28) + badchimStart).char) ?? .__
+        char = Character(초성, 중성, 종성)
     }
-    var unicode: Unicode
+    var unicode: Hex
     var nonHangeul: Character?
-    var char: Character {
-        Character(초성, 중성, 종성)
+    var char: Character = " "
+    var 초성: Jaeum = .__ {
+        didSet { char = Character(초성, 중성, 종성) }
     }
-    var 초성: Jaeum = .__
-    var 중성: Moeum = .__
-    var 종성: Badchim = .__
+    var 중성: Moeum = .__ {
+        didSet { char = Character(초성, 중성, 종성) }
+    }
+    var 종성: Badchim = .__ {
+        didSet { char = Character(초성, 중성, 종성) }
+    }
+    var 받침: Badchim {
+        종성
+    }
 }
 
 extension Geulzza: Equatable {
