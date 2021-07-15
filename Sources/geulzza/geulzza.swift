@@ -167,13 +167,13 @@ public extension Hangeul {
         }
     }
     var 은는: Hangeul {
-        self + (self.endsWithBadchim ? "은 " : "는 ")
+        self + (self.endsWithBadchim ? "은" : "는")
     }
     var 이가: Hangeul {
-        self + (self.endsWithBadchim ? "이 " : "가 ")
+        self + (self.endsWithBadchim ? "이" : "가")
     }
     var 을를: Hangeul {
-        self + (self.endsWithBadchim ? "을 " : "를 ")
+        self + (self.endsWithBadchim ? "을" : "를")
     }
 }
 

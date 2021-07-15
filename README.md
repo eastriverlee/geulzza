@@ -14,13 +14,13 @@ let chicken = "박근혜"
 let rat = "이명박"
 let ashdragon = "leejaeyong"
 let joogija = "JOOJINWOO"
-print(cent.이가 + chicken.을를 + "때렸다.")
+print("\(cent.이가) \(chicken.을를) 때렸다.")
 //윤석열이 박근혜를 때렸다.
-print(ashdragon.은는 + "바보.")
+print("\(ashdragon.은는) 바보.")
 //leejaeyong은 바보.
-print(rat.이가 + "울었다.")
+print(rat.이가 + " 울었다.")
 //이명박이 울었다.
-print(joogija.은는 + "웃었다.")
+print(joogija.은는 + " 웃었다.")
 //JOOJINWOO는 웃었다.
 ```
 eun/neun ee/ga eul/reul will be appended depending on the last consonant.  
@@ -107,7 +107,7 @@ it's made of only one file, but here is the core of this library anyway.
 
 # integration
 ### SPM
-just use Swift Package Manager to install **geulzza** by adding this repository.
+just use Swift Package Manager to install **geulzza** by adding this repository.  
 스위프트 패키지 매니저를 사용해 이 리포지토리를 추가하는 것으로 **geulzza**를 설치하세요.
 ### copy && paste
 or just copy and paste `geulzza.swift` to your project.  
@@ -115,6 +115,8 @@ or just copy and paste `geulzza.swift` to your project.
 
 # support
 support me through kakaopay, so i can at least eat.  
+even a dime helps, for ten of it become a great meal.  
 카카오페이로 후원해 제가 밥은 먹고 다니도록 도와주세요.  
+백 원도 도움이 되는데, 그것도 열 번 모이면 훌륭한 한 끼가 되기 때문입니다.  
 
 ![kakaopay qr code](https://github.com/eastriverlee/support/blob/main/kakaopay.png?raw=true)
