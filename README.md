@@ -117,6 +117,6 @@ or just copy and paste `geulzza.swift` to your project.
 support me through kakaopay, so i can at least eat.  
 even a dime helps a lot, for ten of them become a great meal.  
 카카오페이로 후원해 제가 밥은 먹고 다니도록 도와주세요.  
-백 원도 무척 도움이 되는데, 그것도 열 번만 모이면 훌륭한 한 끼가 되기 때문입니다.  
+백 원조차도 열 번만 모이면 훌륭한 한 끼가 되기 때문에 무척 도움이 됩니다.  
 
 ![kakaopay qr code](https://github.com/eastriverlee/support/blob/main/kakaopay.png?raw=true)
